@@ -7,6 +7,7 @@ def load_files():
 
 
 def similarity(word1, word2):
+    word1, word2 = word1.lower(), word2.lower()
     matches = sum((min(word1.count(char), word2.count(char)) for char in set(word1)))
     return matches / max(len(word1), 1)
 
